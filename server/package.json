@@ -1,0 +1,55 @@
+{
+  "name": "eventsphere-server",
+  "version": "1.0.0",
+  "description": "EventSphere Modular Monolith Backend with Redis, BullMQ, Socket.IO, and AI Assistant",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "worker": "node src/queues/worker.js",
+    "test": "jest --runInBand --detectOpenHandles --forceExit",
+    "test:watch": "jest --watch",
+    "seed": "node ../scripts/seed.js",
+    "generate-pdf": "node ../scripts/generate-pdf.js"
+  },
+  "keywords": [
+    "eventsphere",
+    "real-time",
+    "ticketing",
+    "redis",
+    "socketio",
+    "bullmq",
+    "modular-monolith"
+  ],
+  "author": "EventSphere Team",
+  "license": "ISC",
+  "dependencies": {
+    "@socket.io/redis-adapter": "^8.3.0",
+    "bcryptjs": "^2.4.3",
+    "bullmq": "^5.7.8",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.4",
+    "morgan": "^1.10.0",
+    "pdfkit": "^0.15.0",
+    "qrcode": "^1.5.3",
+    "socket.io": "^4.7.5",
+    "uuid": "^9.0.1",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 30000
+  }
+}

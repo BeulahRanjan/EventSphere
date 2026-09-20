@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #FAFAFA;
+  --color-primary: #22223B;
+  --color-secondary: #4A4E69;
+  --color-muted: #9A8C98;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar matching strict color palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9A8C98;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A4E69;
+}
+
+/* Smooth transitions */
+button, a, input, select, textarea {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Text Badges Styling (Strictly Palette-Compliant) */
+.badge-new {
+  background-color: #22223B;
+  color: #FAFAFA;
+  border: 1px solid #22223B;
+}
+
+.badge-trending {
+  background-color: #4A4E69;
+  color: #FAFAFA;
+  border: 1px solid #4A4E69;
+}
+
+.badge-popular {
+  background-color: #22223B;
+  color: #FAFAFA;
+  border: 1px solid #9A8C98;
+}
+
+.badge-upcoming {
+  background-color: #FAFAFA;
+  color: #22223B;
+  border: 1px solid #4A4E69;
+}
+
+.badge-sold_out {
+  background-color: #22223B;
+  color: #9A8C98;
+  border: 1px dashed #9A8C98;
+  text-decoration: line-through;
+}
+
+.badge-live {
+  background-color: #4A4E69;
+  color: #FAFAFA;
+  border: 1px solid #22223B;
+  animation: pulse-badge 2s infinite ease-in-out;
+}
+
+.badge-cancelled {
+  background-color: #22223B;
+  color: #9A8C98;
+  border: 1px solid #9A8C98;
+}
+
+.badge-booked {
+  background-color: #22223B;
+  color: #FAFAFA;
+  border: 1px solid #4A4E69;
+}
+
+.badge-locked {
+  background-color: #4A4E69;
+  color: #FAFAFA;
+  border: 1px dashed #9A8C98;
+}
+
+@keyframes pulse-badge {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
