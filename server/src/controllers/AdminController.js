@@ -1,7 +1,7 @@
-/**
- * AdminController for EventSphere.
- * Platform monitoring, event moderation, user management, and revenue analytics.
- */
+// /**
+//  * AdminController for EventSphere.
+//  * Platform monitoring, event moderation, user management, and revenue analytics.
+//  */
 
 const { userRepository, eventRepository, bookingRepository, paymentRepository, categoryRepository, venueRepository } = require('../repositories');
 const { sendSuccess } = require('../utils/response');
