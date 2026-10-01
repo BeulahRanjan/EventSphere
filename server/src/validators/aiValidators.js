@@ -12,7 +12,7 @@ const queryAiValidator = [
     //.isLength({ max: 500 })
     //.withMessage('Message cannot exceed 500 characters.'),
   body('conversationId')
-    //.optional()
+    .optional()
     .trim(),
 ];
 
