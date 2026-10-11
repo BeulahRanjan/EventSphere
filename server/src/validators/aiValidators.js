@@ -5,7 +5,7 @@
 const { body } = require('express-validator');
 
 const queryAiValidator = [
-  //body('message')
+  body('message')
     .trim()
     .notEmpty()
     .withMessage('Message is required.')
